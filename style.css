@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background: url(https://source.unsplash.com/SBdmQcW8qag/1920x1580);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  font-family: "Patua One", cursive;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	text-align: center;
+}
+
+.countdown-container h1 {
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+#timer {
+  font-size: 7.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 128px 50px;
+  justify-items: center;
+  grid-column-gap: 40px;
+}
+
+#timer .animated {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  100% {
+    transform: scaleX(1);
+  }
+
+  30%,
+  50%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  0% {
+    transform: scaleX(1);
+  }
+}
+
+.label {
+  font-size: 2.5rem;
+  color: #fec54d;
+}
+
+
+
+.fa-snowflake {
+	color: #fff;
+	position: absolute;
+	top: -20px;
+	animation: fall linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+	}
+}
