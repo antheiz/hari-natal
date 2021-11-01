@@ -18,19 +18,52 @@ body {
 	text-align: center;
 }
 
-.countdown-container h1 {
-  font-size: 4rem;
-  letter-spacing: 0.2rem;
-}
+@media only screen and (min-width: 992px) {
+  .countdown-container h1 {
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  #timer {
+    font-size: 7.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 128px 50px;
+    justify-items: center;
+    grid-column-gap: 40px;
+  }
 
-#timer {
-  font-size: 7.5rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 128px 50px;
-  justify-items: center;
-  grid-column-gap: 40px;
-}
+  .label {
+    font-size: 2.5rem;
+    color: #fec54d;
+  }
+} 
+
+
+@media only screen and (max-width: 600px) {
+  .countdown-container h1 {
+    font-size: 17px;
+    letter-spacing: 0.2rem;
+    padding-top: 55px;
+  }
+  
+  #timer {
+    font-size: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 128px 50px;
+    justify-items: center;
+    grid-column-gap: 40px;
+    padding-top: 65px;
+  }
+
+  .label {
+    margin-top: -75px;
+    font-size: 1rem;
+    color: #fec54d;
+  }
+} 
+
 
 #timer .animated {
   animation-name: pulse;
@@ -56,10 +89,7 @@ body {
   }
 }
 
-.label {
-  font-size: 2.5rem;
-  color: #fec54d;
-}
+
 
 
 
